@@ -38,7 +38,9 @@ size, queryCount = input.split
 array = Array.new(size.to_i)
 input = gets
 array = input.split(' ')
-
+array = array.map(&:to_i)
+#puts array.sort{|x,y| y <=> x }
+array = array.sort{|x,y| y <=> x }
 
 while queryCount.to_i != 0
   #puts "You have #{queryCount} guesses left"
